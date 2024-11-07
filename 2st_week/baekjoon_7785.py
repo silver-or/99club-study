@@ -2,10 +2,10 @@ from collections import defaultdict
 
 n = int(input())
 d = defaultdict(str)
-l = []
+
 for _ in range(n):
-    person = input().split()
-    d[person[0]] = person[1]
+    person, status = input().split()
+    d[person] = status
 
 sorted_dict = dict(sorted(d.items(), key=lambda x: x[0], reverse=True))
 
