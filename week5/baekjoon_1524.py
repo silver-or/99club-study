@@ -13,7 +13,12 @@ def solution(T):
             else: # sejun[0] >= sebi[0]
                 sebi.pop(0)
 
-        print('S') if sejun else print('B')
+        if sejun:
+            print('S')
+        elif sebi:
+            print('B')
+        else:
+            print('C')
 
 def main():
     solution(int(sys.stdin.readline()))
